@@ -8,7 +8,7 @@ namespace LegoMinifigures.Composition.Legs
     {
         public bool HasPants { get; set; }
         public ShoeType Shoes { get; set; }
-        // field
+
         Random _rng = new Random(4);
 
 

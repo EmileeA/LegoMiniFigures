@@ -11,7 +11,7 @@ namespace LegoMiniFigures
     class Astronaut
     {
         // public proerty
-public Location Location { get; set; }
+        public Location Location { get; set; }
         // Name == "Space Person"..... this is the expression and it is detereming what the value of this property is
         //Expression Bodied Property (always readonly)
         public bool SuitedUp => Name != "Space Person";
@@ -25,13 +25,13 @@ public Location Location { get; set; }
         public string Job { get; private set; }
         public int OxygenLevel { private get; set; }
 
-        public AstronautTorso Torso { get; set; }
+        public TorsoBase Torso { get; set; }
         public AstronautLegs Legs { get; set; }
         public ZoeHead Head { get; set; }
 
         // ctor tab tab - to create my own contructor // the only time you're going to write a constructor is if you want to use something when that class gets instantiated.
         public Astronaut(string name, string job,
-                         ZoeHead head, AstronautTorso torso,
+                         ZoeHead head, TorsoBase torso,
                          AstronautLegs legs)
         {
             Name = name;
@@ -40,8 +40,8 @@ public Location Location { get; set; }
             Head = head;
             Torso = torso;
             Legs = legs;
-
         }
+
         public void Promote()
         {
             Job = "Commander of Janitors";
